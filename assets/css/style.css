@@ -1736,7 +1736,8 @@ header {
 }
 
 .hero__inner__image__title {
-    font-size: 4.7rem;
+    font-size: 4rem;
+    letter-spacing: 3px;
     color: #fff;
     line-height: 2;
     font-family: "Lobster", cursive;
