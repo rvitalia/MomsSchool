@@ -2171,7 +2171,7 @@ header {
   width: 100%;
   background-color: #fbd6e6;
   height: auto;
-  padding: 0 0 3rem;
+  padding: 0 0 1rem;
 }
 
 .payPacket__inner {
@@ -2199,12 +2199,12 @@ header {
   display: flex;
   flex-direction: column;
   border-radius: 3rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   transition: all 0.4s linear;
 }
 .payPacket__inner__item:hover {
-  transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.01, 1.01, 1.01);
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
 }
@@ -2273,12 +2273,14 @@ header {
 .payPacket__inner__item__wrapper {
   text-align: left;
   list-style: inside;
-  flex-grow: 1;
   background: -webkit-linear-gradient(to bottom, #000000 0%, #1700ff 100%);
   background: -moz-linear-gradient(to bottom, #000000 0%, #1700ff 100%);
   background: linear-gradient(to bottom, #000000 0%, #1700ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.4s linear;
+  transform: translateY(-300%);
+  opacity: 0;
 }
 
 .payPacket__inner__item__wrapper__scroll {
@@ -2324,6 +2326,61 @@ header {
   display: none;
 }
 
+.connection {
+  width: 100%;
+  padding: 0 0 3rem;
+  background-color: #fbd6e6;
+}
+
+.connection__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: rgba(81, 4, 100, 0.9);
+  border-radius: 2rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.connection__inner__title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-indent: 5rem;
+  color: #fff;
+  padding: 0 1.5rem;
+  font-style: italic;
+  font-family: "Caveat", cursive;
+}
+
+.connection__inner__call {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 2.2rem 2.5rem;
+  margin-right: 3rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  font-family: "Playfair Display", serif;
+  transition: all 0.4s linear;
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  0% {
+    background-color: white;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #ff9900;
+    transform: scale(1.03);
+  }
+  100% {
+    background-color: white;
+    transform: scale(1);
+  }
+}
 footer {
   width: 100%;
   flex: 0 0 auto;
@@ -2339,7 +2396,7 @@ footer {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(90deg, #808ac8, #ff819d, #eac23a);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding: 2rem 0;
+  padding: 2rem 0 2rem;
   border-top-right-radius: 4rem;
   border-top-left-radius: 4rem;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
